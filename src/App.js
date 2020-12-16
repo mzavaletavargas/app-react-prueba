@@ -1,7 +1,12 @@
 import React from 'react';
 import TodoList from './TodoList';
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import Navigation from './Navigation';
 export default function App() {
   const dataList = [
     {
@@ -19,9 +24,30 @@ export default function App() {
   ]
 
   return (
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Switch>
+          <Route path="/pagina1">
+            <div>
+              Hola Esta es la página uno
+              </div>
+          </Route>
 
-    <div className="App">
-      <TodoList list={dataList}> </TodoList>
-    </div>
+          <Route path="/pagina2">
+            <TodoList list={dataList}> </TodoList>
+
+          </Route>
+
+          <Route path="/">
+            <div>
+              Esta es la ruta base
+            </div>
+          </Route>
+        </Switch>
+
+
+      </div>
+    </Router>
   );
 }
