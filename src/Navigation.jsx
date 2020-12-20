@@ -35,9 +35,7 @@ const Navigation = (props) => {
      <MenuIcon />
     </IconButton>
     <Typography variant="h6" color="inherit">
-     <Link className={classes.link} to="/pagina1">Página 1</Link>
-     <Link className={classes.link} to="/pagina2">Página 2</Link>
-     <Link className={classes.link} to="/pagina3">Página 3</Link>
+     Bienvenido a mi blog
     </Typography>
    </Toolbar>
   </AppBar>
